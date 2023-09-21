@@ -20,7 +20,7 @@ export const tokens = (mode) => ({
                 100: "#d0d1d5",
                 200: "#a1a4ab",
                 300: "#727681",
-                400: "#434957",
+                400: "#1F2A40",
                 500: "#141b2d",
                 600: "#101624",
                 700: "#0c101b",
@@ -76,7 +76,7 @@ export const tokens = (mode) => ({
                 100: "#040509",
                 200: "#080b12",
                 300: "#0c101b",
-                400: "#f2f0f0",
+                400: "#e2e1e1",
                 500: "#141b2d",
                 600: "#434957",
                 700: "#727681",
@@ -126,12 +126,12 @@ export const themeSettings = (mode) => {
     const colors = tokens(mode);
 
     return {
-        pallete: {
+        palette: {
             mode: mode,
             ...(mode === 'dark'
             ? {
                 primary: {
-                    main: colors.primary[500], 
+                    main: colors.primary[300], 
                 },
                 secondary: {
                     main: colors.greenAccent[500],
@@ -162,31 +162,39 @@ export const themeSettings = (mode) => {
             })
         },
         typography: {
-            fontFamily: ["Source Sans 3", "sans-serif"].join(","),
+            fontFamily: ["Source Sans 3", "sans-serif"].join(" , "),
             fontSize: 12,
             h1: {
-                fontFamily: ["Source Sans 3", "sans-serif"].join(","),
+                fontFamily: ["Source Sans 3", "sans-serif"].join(" , "),
                 fontSize: 40, 
             },
             h2: {
-                fontFamily: ["Source Sans 3", "sans-serif"].join(","),
+                fontFamily: ["Source Sans 3", "sans-serif"].join(" , "),
                 fontSize: 32, 
             },
             h3: {
-                fontFamily: ["Source Sans 3", "sans-serif"].join(","),
+                fontFamily: ["Source Sans 3", "sans-serif"].join(" , "),
                 fontSize: 24, 
             },
             h4: {
-                fontFamily: ["Source Sans 3", "sans-serif"].join(","),
+                fontFamily: ["Source Sans 3", "sans-serif"].join(" , "),
                 fontSize: 20, 
             },
             h5: {
-                fontFamily: ["Source Sans 3", "sans-serif"].join(","),
+                fontFamily: ["Source Sans 3", "sans-serif"].join(" , "),
                 fontSize: 16, 
             },
             h6: {
-                fontFamily: ["Source Sans 3", "sans-serif"].join(","),
+                fontFamily: ["Source Sans 3", "sans-serif"].join(" , "),
                 fontSize: 14, 
+            },
+            label: {
+                fontFamily: ["Source Sans 3", "sans-serif"].join(" , "),
+                fontSize: 12, 
+            },
+            button: {
+                fontFamily: ["Source Sans 3", "sans-serif"].join(" , "),
+                fontSize: 12, 
             },
         }
     }
@@ -209,7 +217,7 @@ export const useMode = () => {
     )
 
     const theme = useMemo(() => createTheme(themeSettings(mode)), [mode])
-
+    // console.log("Theme.js:"+ mode +" theme.palette.mode: "+ theme.palette.mode);
     return [theme, colorMode];
 }
 
