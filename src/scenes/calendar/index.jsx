@@ -45,7 +45,7 @@ const Calendar = () => {
             <Box flex="1 1 20%" backgroundColor={colors.primary[400]} p="15px" borderRadius="4px">
                 <Typography variant="h4">Events</Typography>
                 <List>
-                    {currentEvents.map((event) => {
+                    {currentEvents.map((event) => (
                         <ListItem
                             key={event.id}
                             sx={{ backgroundColor: colors.greenAccent[500], margin: "10px 0", borderRadius: "2px"}}
@@ -63,7 +63,7 @@ const Calendar = () => {
                                 }
                             />
                         </ListItem>
-                    })}
+                    ))}
                 </List>
             </Box>
 
@@ -97,9 +97,9 @@ const Calendar = () => {
                     eventClick={handleEventClick}
                     eventsSet={(events) => setCurrentEvents(events)}
                     initialEvents={[
-                        {id: "1234", title: "All Day Event", date: "2023-9-30"},
-                        {id: "4123", title: "Timed Event", date: "2023-9-31"},
-                    ]}
+                        {id: "1234", title: "All Day Event", date: "2023-09-30"},
+                        {id: "4123", title: "Timed Event", date: "2023-09-31"},
+                      ]}
                 />
             </Box>
         </Box>
