@@ -147,7 +147,7 @@ const Dashboard = () => {
           >
             <Box>
               <Typography
-                variant='h5'
+                variant='h4'
                 fontWeight='600'
                 color={colors.grey[100]}
               >
@@ -194,14 +194,14 @@ const Dashboard = () => {
             display='flex'
             justifyContent='space-between'
             alignItems='center'
-            borderBottom={`4px solid ${colors.primary[500]}`}
+            borderBottom={`4px solid ${colors.background}`}
             color={colors.grey[100]}
             p='15px'
           >
             <Typography
               color={colors.grey[100]}
-              variant='h5'
-              fontweight='600'
+              variant='h4'
+              fontWeight='600'
             >
               Recent Transactions
             </Typography>
@@ -212,14 +212,14 @@ const Dashboard = () => {
               display='flex'
               justifyContent='space-between'
               alignItems='center'
-              borderBottom={`4px solid ${colors.primary[500]}`}
+              borderBottom={`4px solid ${colors.background}`}
               p='15px'
             >
               <Box>
                 <Typography
                   color={colors.greenAccent[500]}
                   variant='h5'
-                  fontweight='600'
+                  fontWeight='600'
                 >
                   {transaction.txId}
                 </Typography>
@@ -246,8 +246,8 @@ const Dashboard = () => {
           p='30px'
         >
           <Typography
-            variant='h5'
-            fontweight='600'
+            variant='h4'
+            fontWeight='600'
           >
             Campaign
           </Typography>
@@ -258,13 +258,14 @@ const Dashboard = () => {
             mt='25px'
           >
             <ProgressCircle
-              progress='.7'
+              progress='.8'
               size='125'
             />
             <Typography
               variant='h3'
               color={colors.greenAccent[500]}
               sx={{ mt: '15px' }}
+              fontWeight='bold'
             >
               $69,230 Revenue Generated
             </Typography>
@@ -279,8 +280,8 @@ const Dashboard = () => {
           p='30px'
         >
           <Typography
-            variant='h5'
-            fontweight='600'
+            variant='h4'
+            fontWeight='600'
           >
             Sales Quantity
           </Typography>
@@ -299,14 +300,14 @@ const Dashboard = () => {
           p='30px'
         >
           <Typography
-            variant='h5'
-            fontweight='600'
+            variant='h4'
+            fontWeight='600'
           >
             Sales Quantity
           </Typography>
           <Box
-            height='280px'
-            m='-30px'
+            height='300px'
+            m='-35px'
           >
             <PieChart isDashboard={true} />
           </Box>
