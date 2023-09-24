@@ -60,6 +60,7 @@ export const tokens = (mode) => ({
           800: '#2a2d64',
           900: '#151632',
         },
+        background: '#141b2d',
       }
     : {
         grey: {
@@ -117,6 +118,7 @@ export const tokens = (mode) => ({
           800: '#c3c6fd',
           900: '#e1e2fe',
         },
+        background: '#cccccc',
       }),
 });
 
